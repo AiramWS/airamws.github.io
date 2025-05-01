@@ -1,0 +1,232 @@
+button {
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border: ridge 10px antiquewhite;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+
+    width: 60%;
+    height: 80%;
+    z-index: 2;
+    transition: opacity 0.3 ease;
+}
+
+.menu.hidden {
+    display: none;
+}
+
+.menu .m-button {
+    border: outset 5px rgb(224, 211, 194);
+    background-color: rgb(211, 206, 200);
+
+    width: 75%;
+    height: 15%;
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 2.5vw;
+}
+
+.menu .m-button:hover {
+    border: inset 5px rgb(224, 211, 194);
+    background-color: rgb(181, 178, 174)
+}
+
+.user-info {
+    box-sizing: border-box;
+    width: 75%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.user-info h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 2vw;
+    color: white;
+
+    margin: 2% 0 0 0;
+    position: relative;
+}
+
+#right-panel .user-info h1 {
+    transform: rotateY(180deg)
+}
+
+.user-info hr {
+    border: ridge 3px whitesmoke;
+    width: 85%;
+}
+
+.user-frame {
+    border: ridge 5px whitesmoke;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    width: 85%;
+    aspect-ratio: 1/1;
+
+    position: relative;
+    z-index: 1;
+}
+
+.user-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 600%;
+    color: red;
+}
+
+#right-panel .user-icon {
+    color: blue;
+}
+
+.color-picker .color.disabled {
+    opacity: 0.4; 
+    pointer-events: none; 
+    cursor: not-allowed;
+}
+
+
+.color-picker .color.disabled {
+    background-color: #f0f0f0; 
+    border: 2px solid #ddd; 
+}
+
+.picture-changer, .save-settings, .user-settings {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    background: none;
+
+    font-style: bolder;
+    font-size: 1.5vw;
+    margin: 0;
+
+    z-index: 2;
+}
+
+.save-settings.disabled, .user-settings.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.picture-changer {
+    display: none;
+}
+
+.save-settings, .user-settings {
+    top: 22%;
+    left: 17%;
+    transform: none;
+    color: whitesmoke;
+}
+
+.save-settings {
+    display: none;
+}
+
+#left.picture-changer {
+    left: 5%;
+}
+
+#right.picture-changer {
+    right: 5%;
+}
+
+.color-picker {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border: ridge 5px whitesmoke;
+    background-color: antiquewhite;
+    box-sizing: border-box;
+    
+
+    width: 85%;
+    max-height: 0vh;
+    overflow: hidden;
+    pointer-events: none;
+
+    transition:
+        all 1s;
+    z-index: 1;
+}
+
+.color-picker.visible {
+    display: flex;
+    max-height: 5vh;
+    min-height: 5vh;
+    pointer-events: auto;
+    transition: 
+        all 1s;
+}
+
+.color-picker .color {
+    border: outset 2.5px goldenrod;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    height: 80%;
+    aspect-ratio: 1/1;
+
+    opacity: 0.9;
+}
+
+.color-picker .color.selected {
+    border: outset 2.5px black;
+    opacity: 1;
+}
+
+.color-picker .color:hover {
+    opacity: 1;
+}
+
+#red {
+    background-color: red;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#pink {
+    background-color: pink;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#black {
+    background-color: black;
+}
+
