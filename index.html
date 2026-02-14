@@ -28,19 +28,41 @@
                 <div class="left-fold"></div>
             </div>
         </div>
+        <div class="message-overlay">
+            <div class="message-border"></div>
+            <div class="message-text">
+                <h2>Para Claudia</h2>
+                <h3>14/02/26</h3>
+                <p>Este es el mensaje secreto que quería compartir contigo. Espero que te guste.</p>
+                <p>Con cariño,<br>Yo</p>
+            </div>
+            <button class="close-btn">Cerrar</button>
+        </div>
     </main>
 
     <script>
         const letterImage = document.querySelector('.letter-image');
+        const messageOverlay = document.querySelector('.message-overlay');
+        const closeBtn = document.querySelector('.close-btn');
 
+        // Al hacer clic en la carta, mostrar overlay y activar animación de la carta
         letterImage.addEventListener('click', function (e) {
-            e.preventDefault(); // Opcional: evita comportamientos por defecto si los hubiera
-            this.classList.toggle('active');
+            e.preventDefault();
+            this.classList.toggle('active'); // Esto sigue controlando la animación de la carta
+            messageOverlay.classList.add('show'); // Mostramos el overlay
         });
 
-        // Opcional: si quieres que al tocar fuera se desactive, añade este código
+        // Al hacer clic en el botón de cerrar, ocultar overlay y desactivar la carta
+        closeBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            messageOverlay.classList.remove('show');
+            letterImage.classList.remove('active'); // Opcional: si quieres que la carta vuelva a su estado inicial
+        });
+
+        // Opcional: si quieres cerrar al tocar fuera de la carta y del overlay
         document.addEventListener('click', function (e) {
-            if (!letterImage.contains(e.target)) {
+            if (!letterImage.contains(e.target) && !messageOverlay.contains(e.target)) {
+                messageOverlay.classList.remove('show');
                 letterImage.classList.remove('active');
             }
         });
