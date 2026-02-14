@@ -117,7 +117,7 @@
 	}
 }
 
-.letter-image:hover {
+/* .letter-image:hover {
 	.animated-mail {
 		transform: translateY(50px);
 		-webkit-transform: translateY(50px);
@@ -141,7 +141,7 @@
 	.shadow {
 		width: 250px;
 	}
-}
+} */
 
 .letter-image.active .animated-mail {
 	transform: translateY(50px);
