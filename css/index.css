@@ -1,0 +1,5 @@
+body {
+    background-image: var(--wallpaper);
+    background-size: cover;
+    background-position: center;
+}
