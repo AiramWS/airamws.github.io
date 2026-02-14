@@ -8,6 +8,11 @@
 	-moz-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;  /* Quita el resaltado en WebKit (Chrome, Safari) */
+  outline: none;                             /* Elimina cualquier outline adicional */
+  -webkit-touch-callout: none;                /* Evita el menú contextual al mantener presionado */
+  user-select: none;   
 }
 
 .animated-mail {
