@@ -17,7 +17,7 @@
 	-webkit-transition: .4s;
 	-moz-transition: .4s;
 	transition: .4s;
-	
+
 	.body {
 		position: absolute;
 		bottom: 0;
@@ -28,7 +28,7 @@
 		border-color: transparent transparent #f7a1b5 transparent;
 		z-index: 2;
 	}
-	
+
 	.top-fold {
 		position: absolute;
 		top: 50px;
@@ -45,7 +45,7 @@
 		border-color: #d9879e transparent transparent transparent;
 		z-index: 2;
 	}
-	
+
 	.back-fold {
 		position: absolute;
 		bottom: 0;
@@ -54,7 +54,7 @@
 		background: #d9879e;
 		z-index: 0;
 	}
-	
+
 	.left-fold {
 		position: absolute;
 		bottom: 0;
@@ -65,7 +65,7 @@
 		border-color: transparent transparent transparent #e68fab;
 		z-index: 2;
 	}
-	
+
 	.letter {
 		left: 20px;
 		bottom: 0px;
@@ -78,19 +78,17 @@
 		-webkit-transition: .4s .2s;
 		-moz-transition: .4s .2s;
 		transition: .4s .2s;
-		
+
 		.letter-border {
 			height: 10px;
 			width: 100%;
-      background: repeating-linear-gradient(
-        -45deg,
-        #cb5a5e,
-        #cb5a5e 8px,
-        transparent 8px,
-        transparent 18px
-      );
+			background: repeating-linear-gradient(-45deg,
+					#e68fab,
+					#e02561 8px,
+					transparent 8px,
+					transparent 18px);
 		}
-		
+
 		.letter-title {
 			margin-top: 10px;
 			margin-left: 5px;
@@ -98,6 +96,7 @@
 			width: 40%;
 			background: #e68fab;
 		}
+
 		.letter-context {
 			margin-top: 10px;
 			margin-left: 5px;
@@ -105,7 +104,7 @@
 			width: 20%;
 			background: #e68fab;
 		}
-		
+
 		.letter-stamp {
 			margin-top: 30px;
 			margin-left: 120px;
@@ -118,28 +117,52 @@
 	}
 }
 
-	.letter-image:hover {
-		.animated-mail {
-			transform: translateY(50px);
-			-webkit-transform: translateY(50px);
-			-moz-transform: translateY(50px);
-		}
-		
-		.animated-mail .top-fold {
-			transition: transform .4s, z-index .2s;
-			transform: rotateX(180deg);
-			-webkit-transition: transform .4s, z-index .2s;
-			-webkit-transform: rotateX(180deg);
-			-moz-transition: transform .4s, z-index .2s;
-			-moz-transform: rotateX(180deg);
-			z-index: 0;
-		}
-		
-		.animated-mail .letter {
-			height: 180px;
-		}
-		
-		.shadow {
-			width: 250px;
-		}
+.letter-image:hover {
+	.animated-mail {
+		transform: translateY(50px);
+		-webkit-transform: translateY(50px);
+		-moz-transform: translateY(50px);
 	}
+
+	.animated-mail .top-fold {
+		transition: transform .4s, z-index .2s;
+		transform: rotateX(180deg);
+		-webkit-transition: transform .4s, z-index .2s;
+		-webkit-transform: rotateX(180deg);
+		-moz-transition: transform .4s, z-index .2s;
+		-moz-transform: rotateX(180deg);
+		z-index: 0;
+	}
+
+	.animated-mail .letter {
+		height: 180px;
+	}
+
+	.shadow {
+		width: 250px;
+	}
+}
+
+.letter-image.active .animated-mail {
+	transform: translateY(50px);
+	-webkit-transform: translateY(50px);
+	-moz-transform: translateY(50px);
+}
+
+.letter-image.active .animated-mail .top-fold {
+	transition: transform .4s, z-index .2s;
+	transform: rotateX(180deg);
+	-webkit-transition: transform .4s, z-index .2s;
+	-webkit-transform: rotateX(180deg);
+	-moz-transition: transform .4s, z-index .2s;
+	-moz-transform: rotateX(180deg);
+	z-index: 0;
+}
+
+.letter-image.active .animated-mail .letter {
+	height: 180px;
+}
+
+.letter-image.active .shadow {
+	width: 250px;
+}

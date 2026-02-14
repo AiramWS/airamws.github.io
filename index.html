@@ -29,6 +29,22 @@
             </div>
         </div>
     </main>
+
+    <script>
+        const letterImage = document.querySelector('.letter-image');
+
+        letterImage.addEventListener('click', function (e) {
+            e.preventDefault(); // Opcional: evita comportamientos por defecto si los hubiera
+            this.classList.toggle('active');
+        });
+
+        // Opcional: si quieres que al tocar fuera se desactive, añade este código
+        document.addEventListener('click', function (e) {
+            if (!letterImage.contains(e.target)) {
+                letterImage.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 
 </html>
